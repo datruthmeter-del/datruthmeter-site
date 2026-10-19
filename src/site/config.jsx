@@ -140,7 +140,11 @@ function Hero({ eyebrow, headline, body, portrait, portraitAlt, latestId, latest
             <h1 className="display mt-6 text-[clamp(5rem,15vw,15rem)]"><Accent text={headline} /></h1>
           </div>
           <div className="mt-10 grid gap-8 sm:grid-cols-[1fr_auto] sm:items-end">
-            <p className="max-w-md text-xl leading-snug text-paper/85">{body}</p>
+            <div className="max-w-lg space-y-4 text-paper/85">
+              {String(body || '').split(/\n\s*\n/).filter(Boolean).map((para, i) => (
+                <p key={i} className={i === 0 ? 'text-xl leading-snug text-paper' : 'text-base leading-relaxed'}>{para}</p>
+              ))}
+            </div>
             <div className="mono flex flex-col gap-2 text-[11px]">
               {socials.map((x, i) => <a key={i} href={x.link} target="_blank" rel="noreferrer" className="hover:text-red">{x.label}</a>)}
             </div>
@@ -544,7 +548,7 @@ export function makeConfig(photoField = (label) => ({ type: 'text', label })) {
         fields: {
           eyebrow: text('Small line above the headline'),
           headline: area('Headline', { description: ACCENT }),
-          body: area('Text under the headline'),
+          body: area('Text under the headline (leave a blank line between paragraphs)'),
           portrait: photoField('Photo'),
           portraitAlt: text('Photo description (for screen readers)'),
           latestId: text('Latest episode: YouTube video ID (the part after watch?v=)'),
