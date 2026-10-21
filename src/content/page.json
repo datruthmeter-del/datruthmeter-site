@@ -302,6 +302,26 @@
       }
     },
     {
+      "type": "Shop",
+      "props": {
+        "id": "Shop-1",
+        "anchor": "shop",
+        "gauge": "",
+        "heading": "Shop",
+        "intro": "",
+        "products": [
+          {
+            "title": "DaTruthMeter Engaging Teacher Scripts",
+            "description": "A practical library of copy/paste scripts that helps teachers communicate clearly, de-escalate conflict, set boundaries, and protect their professionalism.",
+            "price": "$15",
+            "image": "https://public-files.gumroad.com/5yzv6o2dnvgucp5eidkpf2mmvlle",
+            "link": "https://datruthmeter.gumroad.com/l/mkwlj",
+            "button": "Get it on Gumroad"
+          }
+        ]
+      }
+    },
+    {
       "type": "PhotoWall",
       "props": {
         "id": "PhotoWall-1",
