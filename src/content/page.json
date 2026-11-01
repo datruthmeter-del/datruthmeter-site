@@ -262,7 +262,7 @@
                 }
               ],
               "sourceText": "“Property Taxes, Vouchers & Broken Courts,” DaTruthMeter. Rulings: DeRolph v. State, 1997, 2000, 2001, 2002",
-              "sourceLink": "https://www.datruthmeter.com/post/property-taxes-vouchers-and-broken-courts-the-perfect-storm-destroying-ohio-s-public-schools"
+              "sourceLink": "/post/property-taxes-vouchers-and-broken-courts-the-perfect-storm-destroying-ohio-s-public-schools"
             }
           },
           {
@@ -295,7 +295,7 @@
                 }
               ],
               "sourceText": "“The Corporate Coup of American Education,” DaTruthMeter",
-              "sourceLink": "https://www.datruthmeter.com/post/the-corporate-coup-of-american-education"
+              "sourceLink": "/post/the-corporate-coup-of-american-education"
             }
           }
         ]
@@ -402,56 +402,7 @@
         "button": "Get The Syllabus",
         "postsHeading": "From the blog",
         "readLabel": "Read",
-        "posts": [
-          {
-            "kicker": "Policy",
-            "title": "The Corporate Coup of American Education",
-            "dek": "How lobbyists, reformers, and politicians are failing America’s students.",
-            "date": "Apr 2026",
-            "image": "/images/blog/corporate-coup.jpg",
-            "link": "https://www.datruthmeter.com/post/the-corporate-coup-of-american-education"
-          },
-          {
-            "kicker": "Ohio",
-            "title": "Property Taxes, Vouchers & Broken Courts",
-            "dek": "Ohio’s school funding problem isn’t just complicated. It has been ruled unconstitutional, and students are still paying the price.",
-            "date": "Feb 2026",
-            "image": "/images/blog/vouchers.jpg",
-            "link": "https://www.datruthmeter.com/post/property-taxes-vouchers-and-broken-courts-the-perfect-storm-destroying-ohio-s-public-schools"
-          },
-          {
-            "kicker": "Democracy",
-            "title": "Who Are the True Patriots for Democracy?",
-            "dek": "Patriotism is loyalty to the law and the Constitution, not blind devotion to a leader.",
-            "date": "Feb 2026",
-            "image": "/images/blog/patriots.jpg",
-            "link": "https://www.datruthmeter.com/post/who-are-the-true-patriots-for-democracy"
-          },
-          {
-            "kicker": "About",
-            "title": "Welcome to DaTruthMeter Media Group",
-            "dek": "Who we are and what we stand for. The first post on the TRUTH blog.",
-            "date": "Jan 2026",
-            "image": "/images/blog/welcome.jpg",
-            "link": "https://www.datruthmeter.com/post/where-education-meets-culture-welcome-to-datruthmeter"
-          },
-          {
-            "kicker": "Story",
-            "title": "Finding Purpose Beyond 1.69",
-            "dek": "A number tried to define his future. A journey of transformation.",
-            "date": "Jan 2026",
-            "image": "/images/blog/finding-purpose.jpg",
-            "link": "https://www.datruthmeter.com/post/finding-purpose-beyond-1-69-a-journey-of-transformation"
-          },
-          {
-            "kicker": "Personal",
-            "title": "My Personal Covid Story",
-            "dek": "How 2020 changed our lives, told from the inside.",
-            "date": "Jan 2021",
-            "image": "",
-            "link": "https://www.datruthmeter.com/post/my-personal-covid-story"
-          }
-        ]
+        "posts": []
       }
     },
     {

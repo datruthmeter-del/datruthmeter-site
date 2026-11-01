@@ -80,10 +80,21 @@ const encodeUtf8 = (s) => {
 };
 const decodeUtf8 = (b64) => new TextDecoder().decode(Uint8Array.from(atob(b64.replace(/\n/g, "")), (c) => c.charCodeAt(0)));
 
-/** The live page.json, as it is on the branch right now. */
-export async function loadContent(token) {
-  const f = await gh(token, `/repos/${REPO}/contents/${CONTENT_PATH}?ref=${BRANCH}`);
+/** A content file (page.json or an essay), as it is on the branch right now. */
+export async function loadContent(token, path = CONTENT_PATH) {
+  const f = await gh(token, `/repos/${REPO}/contents/${path}?ref=${BRANCH}`);
   return { content: JSON.parse(decodeUtf8(f.content)), sha: f.sha };
+}
+
+/** The files in a folder of the repo (the essays), by name. An empty folder is fine. */
+export async function listFiles(token, dir) {
+  try {
+    const items = await gh(token, `/repos/${REPO}/contents/${dir}?ref=${BRANCH}`);
+    return (Array.isArray(items) ? items : []).filter((x) => x.type === "file").map((x) => x.name);
+  } catch (e) {
+    if (/could not be read/.test(String(e?.message))) return [];
+    throw e;
+  }
 }
 
 /**
@@ -105,4 +116,4 @@ export async function commitFiles(token, files, message) {
   return commit.sha;
 }
 
-export const contentFile = (json) => ({ path: CONTENT_PATH, base64: encodeUtf8(JSON.stringify(json, null, 2) + "\n") });
+export const contentFile = (json, path = CONTENT_PATH) => ({ path, base64: encodeUtf8(JSON.stringify(json, null, 2) + "\n") });

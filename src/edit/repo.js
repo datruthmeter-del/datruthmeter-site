@@ -9,3 +9,5 @@
 export const REPO = (typeof __REPO__ === 'string' && __REPO__) || 'craigoj/datruthmeter-site';
 export const BRANCH = 'main';
 export const CONTENT_PATH = 'src/content/page.json';
+/* One file per essay; the file name is the web address (/post/<name>). src/content/essays.js. */
+export const ESSAYS_DIR = 'src/content/essays';

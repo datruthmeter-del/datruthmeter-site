@@ -122,3 +122,6 @@ html.hub-light .grain::before, .hub-light.grain::before { opacity: .05; }
 @media print {
   .rec-noprint, .fixed { display:none !important; }
 }
+
+/* Essay pages (/post/<slug>): the writing itself. */
+.essay-prose > p:first-of-type::first-letter { font-family: var(--font-display); float: left; font-size: 4.6rem; line-height: .8; margin: .08em .5rem 0 0; color: var(--color-red); }

@@ -8,7 +8,9 @@ is owned outright by DaTruthMeter.
 ## Changing the site: use /edit
 
 Go to `/edit` on the site, click **Sign in with GitHub**, and edit the page as visitors
-see it. Tim signs in with **his own GitHub account**, added to this repo once. Nothing
+see it. The picker at the top switches between the homepage and each essay; **+ New
+essay** starts one (its web address, `/post/<name>`, comes from the title and is fixed
+once published). Tim signs in with **his own GitHub account**, added to this repo once. Nothing
 about the login is tied to CTRL Tech.
 
 Full editing:
@@ -37,6 +39,14 @@ each section type. Those are code changes, through CTRL Tech.
   renders `src/content/page.json` through it; the editor (`src/edit/Editor.jsx`) edits
   `page.json` through it. Same code both ways, so the editor shows exactly what ships,
   and adding or moving sections cannot break publishing.
+- Essays live one per file in `src/content/essays/<address>.json` and render at
+  `/post/<address>` through `src/site/essay.jsx` (same header, footer and theme as the
+  homepage). The addresses are the ones the old Wix site used, so old links keep working.
+  `src/content/essays.js` indexes the folder at build time: The Syllabus on the homepage
+  lists every essay automatically (newest first, unless posts are typed in by hand), and
+  the build writes a real HTML file per essay (`dist/post/<address>/index.html`) so shared
+  links carry the right title and graphic. The essay text is one box: blank line for a
+  paragraph, `## ` heading, `> ` pulled-out line, `- ` list item, `**bold**`, `_italic_`.
 - Photos picked in the editor are resized and stripped of location data in the browser,
   then committed to `public/images/uploads/` with the page.
 - `netlify/functions/auth.js` is the GitHub sign-in. The token stays in the browser tab.
