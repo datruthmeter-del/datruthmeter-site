@@ -1,0 +1,22 @@
+{
+  "root": {
+    "props": {
+      "kicker": "About",
+      "title": "Welcome to DaTruthMeter Media Group",
+      "dek": "Who we are and what we stand for. The first post on the TRUTH blog.",
+      "date": "2026-01-14",
+      "image": "/images/blog/welcome.jpg",
+      "imageAlt": ""
+    }
+  },
+  "content": [
+    {
+      "type": "Prose",
+      "props": {
+        "id": "Prose-1",
+        "body": "## Who We Are and What We Stand For\n\nWelcome to DaTruthMeter Media Group! This is the TRUTH blog, one of our primary ways to connect with our community. As the founder, I want this post to serve as a clear introduction of who I am, what DaTruthMeter stands for, and why this platform exists.\n\nMy name is Timothy McKinney Jr., and DaTruthMeter Media Group is a Black-owned independent media company. We are committed to amplifying truth, elevating culture, and empowering voices, particularly in the realms of education, community, and African American culture. The name “DaTruthMeter” is intentional. It represents a standard and a measure—a commitment to examine narratives carefully, challenge misinformation, and ask the questions that too often go unanswered.\n\nIn a world where headlines move quickly, and public opinion is shaped in fragments, DaTruthMeter exists to slow the conversation down. We aim to tell the truth with clarity, context, and purpose.\n\n## My Personal Journey\n\nPart of why this work matters to me is deeply personal. I didn’t start my journey as the “likely success story.” In high school, I finished with a 1.69 GPA—an outcome that could have easily become a permanent label. Instead, it became the beginning of a different story. Through resilience, discipline, and the support of those who believed in me, I went on to earn multiple degrees and two educator licenses: one as an Intervention Specialist and another as a Principal.\n\nToday, I serve as an Assistant Principal. I remain close enough to the day-to-day realities of schooling to understand what educators and students face. I also see the broader systems and decisions that shape outcomes. This unique perspective fuels my passion for this work.\n\n## Bridging the Gap in Conversations\n\nI created this blog because too many conversations about our schools and communities happen without the voices of those living the experience. Education is often discussed through oversimplified narratives that ignore root causes, dismiss cultural realities, and misplace blame. At the same time, Black culture is frequently treated as a topic to be evaluated rather than a people and a history to be understood.\n\nDaTruthMeter is my response to that gap. This platform will offer commentary, analysis, and storytelling grounded in lived experience. We are informed by our work and committed to accountability.\n\n## What to Expect in Future Posts\n\nIn the coming posts, you can expect thoughtful writing that explores education through a truth-centered lens. We’ll delve into the realities educators face, the policies shaping school conditions, and how public narratives influence community treatment and funding.\n\nYou can also look forward to content showcasing Black excellence, tackling cultural challenges, and focusing on solutions that honor our people and potential. There will be thought pieces, commentary, and analysis aimed at advancing our culture. My goal is not to incite outrage but to foster understanding, elevate the discussion, and support enduring progress.\n\n## The Mission of DaTruthMeter Media Group\n\nAt its core, DaTruthMeter Media Group exists to amplify truth, elevate culture, and empower voices in education. This is the mission I am committed to, and it is the standard I intend to maintain across every post, episode, and message that comes from this platform.\n\nNow, I want to hear from you. What is one truth about education, culture, or community that you believe deserves more honest attention than it currently receives?\n\nLeave a comment and share your perspective. To stay connected, SUBSCRIBE BELOW so you don’t miss what’s coming next!\n\nWe are DaTruthMeter! Where Culture Meets Truth.... And Truth Meets Power!!\n\nPeace and Blessings!"
+      }
+    }
+  ],
+  "zones": {}
+}

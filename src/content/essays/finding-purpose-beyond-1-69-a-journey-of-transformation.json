@@ -1,0 +1,22 @@
+{
+  "root": {
+    "props": {
+      "kicker": "Story",
+      "title": "Finding Purpose Beyond 1.69",
+      "dek": "A number tried to define his future. A journey of transformation.",
+      "date": "2026-01-01",
+      "image": "/images/blog/finding-purpose.jpg",
+      "imageAlt": ""
+    }
+  },
+  "content": [
+    {
+      "type": "Prose",
+      "props": {
+        "id": "Prose-1",
+        "body": "For a long time, a number tried to define my future! A 1.69 GPA followed me like a shadow through high school, quietly shaping how others saw me and, at times, how I saw myself. In a system that often reduces young people to test scores and transcripts, that number carried weight. It suggested limitation. It implied failure. It whispered that certain doors would never open. But what it never captured was potential, resilience, or purpose. Those things don’t fit neatly into a data point.\n\nMy journey from that moment to becoming an Assistant Principal with three degrees and two educator licenses was not linear, easy, or guaranteed. It was built through struggle, persistence, and an unwavering decision to refuse the narrative placed on my life. Education did not always feel like a welcoming space for me, yet it became the very arena where transformation occurred. I learned early that systems are not always designed to recognize brilliance in its raw form, especially when it comes wrapped in the lived experiences of Black students. Still, I chose to stay, to grow, and to push forward.\n\nAlong the way, each degree earned and each license obtained represented more than academic achievement. They were acts of reclamation. They were proof that past performance does not dictate future capacity. Becoming an Intervention Specialist and later earning a Principal license were milestones that carried deeper meaning. Those milestones positioned me to serve students who look like the younger version of myself, students whose potential may be overlooked but whose futures are full of promise. Standing today as an Assistant Principal is not about the title. It is about access, responsibility, and impact!\n\nThis journey is the foundation of DaTruthMeter Media Group. The platform was not created for personal validation, but for collective empowerment. It exists to challenge narrow narratives, particularly those that shape how Black students, educators, and communities are perceived. Too often, our stories are misconstrued, filtered through systems that misunderstand our realities. DaTruthMeter was built to tell those stories with honesty, dignity, and purpose.\n\n“From 1.69 to Purpose” is more than a personal reflection; it is an invitation. It invites educators to look beyond labels and see humanity. It invites students to understand that struggle is not a sentence, but a chapter. Chapters that evolves into a masterpiece of a story. It invites communities to demand media that does more than inform, media that inspires change. Purpose is not discovered by accident. It is forged through experience, reflection, and the courage to persist when the odds say otherwise!\n\nIf there is one truth this journey affirms, it is this: where you start does not determine where you are capable of going. A GPA does not measure your worth. A setback does not define your destiny. Purpose has a way of revealing itself when you commit to growth and refuse to be counted out. My story is one of many, but it stands as proof that transformation is possible, and that TRUTH, when told boldly, has the power to change lives."
+      }
+    }
+  ],
+  "zones": {}
+}

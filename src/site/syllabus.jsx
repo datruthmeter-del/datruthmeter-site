@@ -1,5 +1,9 @@
 import { useState } from 'react';
 import { Img, SyllabusForm, POPUP_KEY, store } from './kit.jsx';
+import { essayCards } from '../content/essays.js';
+
+/* A post on this site opens in the same tab; anything else (an old Wix link, a PDF) in a new one. */
+const ext = (link) => (/^https?:/i.test(link || '') ? { target: '_blank', rel: 'noreferrer' } : {});
 
 /* The Syllabus: signup plus the blog posts, in one section. Marker look chosen by Tim 2026-10-13.
    Colours are palette rows only: ink, paper, red, blood. */
@@ -50,7 +54,7 @@ function Marker({ s }) {
         <span className="mono text-[10px] text-paper/60">{s.posts.length} columns</span>
       </div>
       {first && (
-        <a href={first.link} target="_blank" rel="noreferrer" className="group mt-8 grid gap-8 bg-paper text-ink md:grid-cols-[1.2fr_1fr]">
+        <a href={first.link} {...ext(first.link)} className="group mt-8 grid gap-8 bg-paper text-ink md:grid-cols-[1.2fr_1fr]">
           {first.image && <span className="block overflow-hidden"><CardImg src={first.image} className="transition-transform duration-700 group-hover:scale-105" /></span>}
           <span className="block p-8 sm:p-10 md:col-start-2 md:row-start-1">
             <span className="mono inline-block bg-blood px-2 py-1 text-[10px] text-cream">{first.kicker} · latest</span>
@@ -62,7 +66,7 @@ function Marker({ s }) {
       )}
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {rest.map((p, i) => (
-          <a key={i} href={p.link} target="_blank" rel="noreferrer" className="group block border border-paper/20 transition-all duration-300 hover:-translate-y-1 hover:border-red hover:shadow-[6px_6px_0_var(--color-red)]">
+          <a key={i} href={p.link} {...ext(p.link)} className="group block border border-paper/20 transition-all duration-300 hover:-translate-y-1 hover:border-red hover:shadow-[6px_6px_0_var(--color-red)]">
             {p.image && <span className="block aspect-[16/10] overflow-hidden"><CardImg src={p.image} className="transition-transform duration-700 group-hover:scale-105" /></span>}
             <span className="block p-6">
               <span className="mono text-[10px] text-red">{p.kicker}{p.date ? ` · ${p.date}` : ''}</span>
@@ -77,7 +81,8 @@ function Marker({ s }) {
 }
 
 export function SyllabusSection({ shellClass, mark, ...s }) {
-  const data = { ...s, bullets: s.bullets || [], posts: s.posts || [] };
+  // No posts typed in the editor = every essay on the site, newest first (src/content/essays.js).
+  const data = { ...s, bullets: s.bullets || [], posts: s.posts?.length ? s.posts : essayCards() };
   return (
     <section {...mark} className={`bg-ink text-paper ${shellClass}`}>
       <Marker s={data} />

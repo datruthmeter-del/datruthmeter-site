@@ -50,8 +50,10 @@ function Eyebrow({ children, className = 'text-red' }) {
 
 /* ---------- root: site settings, header, footer, and the page's moving parts ---------- */
 
-function Root({ children, puck, editMode, ...s }) {
+export function Root({ children, puck, editMode, atHome = true, ...s }) {
   const editing = Boolean(puck?.isEditing ?? editMode);
+  // On an essay page (src/site/essay.jsx) the menu's #section links need the homepage in front.
+  const to = (l) => (atHome || !String(l || '').startsWith('#') ? l : `/${l}`);
   const ref = useRef(null);
   const [theme, chooseTheme] = useTheme(ref);
   const { p, stops, active } = useScroll(ref);
@@ -90,13 +92,13 @@ function Root({ children, puck, editMode, ...s }) {
         )}
 
         <div className="flex items-center justify-between gap-4 px-5 py-5 sm:px-10 lg:pl-28">
-          <a href="#top" className="display text-2xl tracking-wide lg:hidden">DaTruth<span className="text-red">Meter</span></a>
+          <a href={atHome ? '#top' : '/'} className="display text-2xl tracking-wide lg:hidden">DaTruth<span className="text-red">Meter</span></a>
           <span className="mono hidden text-[10px] text-paper/60 xl:block">{s.tagline}</span>
           <div className="flex items-center gap-4 sm:gap-6">
             <nav className="mono hidden gap-5 whitespace-nowrap text-[11px] md:flex" aria-label="Main">
-              {menu.map((m, i) => <a key={i} href={m.link} className="hover:text-red">{m.label}</a>)}
+              {menu.map((m, i) => <a key={i} href={to(m.link)} className="hover:text-red">{m.label}</a>)}
             </nav>
-            {s.phoneLabel && <a href={s.phoneLink} className="mono whitespace-nowrap text-[10px] hover:text-red md:hidden">{s.phoneLabel}</a>}
+            {s.phoneLabel && <a href={to(s.phoneLink)} className="mono whitespace-nowrap text-[10px] hover:text-red md:hidden">{s.phoneLabel}</a>}
             <ThemeSwitch theme={theme} onChoose={chooseTheme} />
           </div>
         </div>
@@ -114,7 +116,7 @@ function Root({ children, puck, editMode, ...s }) {
             </div>
             <div className="mono flex flex-wrap items-center gap-5 text-[10px] text-paper/60">
               {socials.map((x, i) => <a key={i} href={x.link} target="_blank" rel="noreferrer" className="hover:text-red">{x.label}</a>)}
-              {(s.footerLinks || []).filter((x) => x.label).map((x, i) => <a key={`f${i}`} href={x.link} className="hover:text-red">{x.label}</a>)}
+              {(s.footerLinks || []).filter((x) => x.label).map((x, i) => <a key={`f${i}`} href={to(x.link)} className="hover:text-red">{x.label}</a>)}
               {s.contactEmail && <a href={`mailto:${s.contactEmail}`} className="hover:text-red">{s.contactEmail}</a>}
               <ThemeSwitch theme={theme} onChoose={chooseTheme} />
             </div>
@@ -509,7 +511,7 @@ const sheetHead = (photo) => ({
   ...photo,
 });
 const discuss = list('Discussion questions', { question: area('Question') }, { question: '' }, (x) => (x.question || '').slice(0, 40) || 'Question');
-const source = { sourceText: area('Source (who said it)'), sourceLink: text('Link to the essay') };
+const source = { sourceText: area('Source (who said it)'), sourceLink: text('Link to the essay (/post/its-address, or a full web address)') };
 
 export function makeConfig(photoField = (label) => ({ type: 'text', label })) {
   return {
@@ -665,7 +667,7 @@ export function makeConfig(photoField = (label) => ({ type: 'text', label })) {
           button: text('Button'),
           postsHeading: text('Heading above the blog posts'),
           readLabel: text('Link wording'),
-          posts: list('Blog posts (the first one shows large)', {
+          posts: list('Blog posts: leave this EMPTY to list every essay automatically, newest first. Add posts here only to override that list.', {
             kicker: text('Topic'), title: text('Title'), dek: area('One line about it'), date: text('Date (optional)'),
             image: photoField('His graphic (optional)'), link: text('Link to the post'),
           }, { kicker: '', title: 'New post', dek: '', date: '', image: '', link: '' }, (x) => x.title || 'Post'),
